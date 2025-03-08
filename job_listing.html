@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Search Portal</h1>
+        
+        <div class="filters">
+            <input type="text" id="title" placeholder="Job Title">
+            <input type="text" id="company" placeholder="Company">
+            <select id="location">
+                <option value="">All Locations</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Office">Office</option>
+            </select>
+            <select id="daycare">
+                <option value="">Daycare: Any</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button onclick="filterJobs()">Search</button>
+        </div>
+        
+        <a href="kyr.html" class="link">🌟 Know Your Rights 🌟</a>
+        <br><br>
+        <div id="recommended-jobs" class="glow-box">
+            <h2>✨ Recommended Jobs for You ✨</h2>
+            <div id="recommended-list"></div>
+
+        </div>
+        
+        <div id="job-list"></div>
+        <!-- Modal Structure -->
+        <div id="programModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h2 id="programTitle"></h2>
+                <p id="programInfo"></p>
+                <a id="programLink" href="#" target="_blank">Apply or Learn More</a>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
